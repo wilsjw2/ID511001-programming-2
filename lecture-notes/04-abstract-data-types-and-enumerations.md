@@ -125,6 +125,10 @@ public class Map
 
     public void Add(string key, int value)
     {
+        if (items.ContainsKey(key))
+        {
+             throw new Exception("Key already exists");
+        }
         items[key] = value;
     }
 
